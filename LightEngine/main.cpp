@@ -1,21 +1,17 @@
-#include "src/graphics/window.h"
+#include "LightEngine.h"
+
+using namespace Light;
 
 int main()
 {
-	using namespace light;
-	using namespace graphics;
 
-	Window window("Light Engine", 1920, 1080);
-	glClearColor(0.7f, 0.7f, 0.7f, 1.0f);
-
-
-
-	while (!window.closed())
+	LightEngine engine("Light Engine", 1920, 1080);
+	
+	while (!engine.window->closed())
 	{
-		window.clear();
-		window.update();
+		engine.window->clear();
+		engine.window->update();
 	}
-
 
 	//system("PAUSE");
 	return 0;

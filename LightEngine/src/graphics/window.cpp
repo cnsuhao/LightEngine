@@ -1,14 +1,12 @@
 #include "window.h"
 
-namespace light {
-	namespace graphics {
-
+namespace Light
+{
 		Window::Window(const char* a_title, int a_width, int a_height)
 		{
 			title = a_title;
 			width = a_width;
 			height = a_height;
-
 			init();
 		}
 
@@ -62,5 +60,4 @@ namespace light {
 		{
 			return glfwWindowShouldClose(window);
 		}
-	}
 }

@@ -4,16 +4,15 @@
 #include <GLFW\glfw3.h>
 #include<iostream>
 
-namespace light {
-	namespace graphics {
-
+namespace Light 
+{
 		class Window
 		{
 
 		private:
 			const char* title;
 			int width, height;
-			GLFWwindow * window;
+			GLFWwindow* window;
 
 		public:
 			Window(const char* a_title, int a_width, int a_height);
@@ -25,5 +24,4 @@ namespace light {
 		private:
 			void init();
 		};
-	}
 }

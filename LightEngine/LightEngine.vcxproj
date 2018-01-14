@@ -126,11 +126,13 @@
     <ClCompile Include="src\graphics\window.cpp" />
     <ClCompile Include="LightEngine.cpp" />
     <ClCompile Include="src\input\input.cpp" />
+    <ClCompile Include="src\math\vector2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\graphics\window.h" />
     <ClInclude Include="LightEngine.h" />
     <ClInclude Include="src\input\input.h" />
+    <ClInclude Include="src\math\vector2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

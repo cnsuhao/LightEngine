@@ -4,7 +4,6 @@ using namespace Light;
 
 int main()
 {
-
 	LightEngine engine("Light Engine", 1920, 1080);
 	
 	while (!engine.window->closed())

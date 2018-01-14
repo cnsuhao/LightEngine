@@ -6,22 +6,24 @@
 
 namespace Light 
 {
-		class Window
-		{
+	class Window
+	{
 
-		private:
-			const char* title;
-			int width, height;
-			GLFWwindow* window;
+		friend class Input;
 
-		public:
-			Window(const char* a_title, int a_width, int a_height);
-			~Window();
-			void clear() const;
-			void update();
-			bool closed() const;
+	private:
+		const char* title;
+		int width, height;
+		GLFWwindow* window;
 
-		private:
-			void init();
-		};
+	public:
+		Window(const char* a_title, int a_width, int a_height);
+		~Window();
+		void clear() const;
+		void update();
+		bool closed() const;
+
+	private:
+		void init();
+	};
 }

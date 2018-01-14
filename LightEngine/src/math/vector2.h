@@ -15,10 +15,10 @@ namespace Light
 		Vector2& multiply(const Vector2& other);
 		Vector2& divide(const Vector2& other);
 
-		friend Vector2 operator+(const Vector2& vector2_1, const Vector2& vector2_2);
-		friend Vector2 operator-(const Vector2& vector2_1, const Vector2& vector2_2);
-		friend Vector2 operator*(const Vector2& vector2_1, const Vector2& vector2_2);
-		friend Vector2 operator/(const Vector2& vector2_1, const Vector2& vector2_2);
+		friend Vector2 operator+(const Vector2& Vector2_1, const Vector2& Vector2_2);
+		friend Vector2 operator-(const Vector2& Vector2_1, const Vector2& Vector2_2);
+		friend Vector2 operator*(const Vector2& Vector2_1, const Vector2& Vector2_2);
+		friend Vector2 operator/(const Vector2& Vector2_1, const Vector2& Vector2_2);
 		Vector2& operator+=(const Vector2& other);
 		Vector2& operator-=(const Vector2& other);
 		Vector2& operator*=(const Vector2& other);

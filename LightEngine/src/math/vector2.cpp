@@ -1,4 +1,4 @@
-#include "vector2.h"
+#include "Vector2.h"
 
 namespace Light
 {
@@ -16,24 +16,24 @@ namespace Light
 	
 	// Operate on two Vector2 objects and return a new Vector2 object
 
-	Vector2 operator+(const Vector2& vector2_1, const Vector2& vector2_2)
+	Vector2 operator+(const Vector2& Vector2_1, const Vector2& Vector2_2)
 	{
-		return Vector2(vector2_1.x + vector2_2.x, vector2_1.y + vector2_2.y);
+		return Vector2(Vector2_1.x + Vector2_2.x, Vector2_1.y + Vector2_2.y);
 	}
 
-	Vector2 operator-(const Vector2& vector2_1, const Vector2& vector2_2)
+	Vector2 operator-(const Vector2& Vector2_1, const Vector2& Vector2_2)
 	{
-		return Vector2(vector2_1.x - vector2_2.x, vector2_1.y - vector2_2.y);
+		return Vector2(Vector2_1.x - Vector2_2.x, Vector2_1.y - Vector2_2.y);
 	}
 
-	Vector2 operator*(const Vector2& vector2_1, const Vector2& vector2_2)
+	Vector2 operator*(const Vector2& Vector2_1, const Vector2& Vector2_2)
 	{
-		return Vector2(vector2_1.x * vector2_2.x, vector2_1.y * vector2_2.y);
+		return Vector2(Vector2_1.x * Vector2_2.x, Vector2_1.y * Vector2_2.y);
 	}
 
-	Vector2 operator/(const Vector2& vector2_1, const Vector2& vector2_2)
+	Vector2 operator/(const Vector2& Vector2_1, const Vector2& Vector2_2)
 	{
-		return Vector2(vector2_1.x / vector2_2.x, vector2_1.y / vector2_2.y);
+		return Vector2(Vector2_1.x / Vector2_2.x, Vector2_1.y / Vector2_2.y);
 	}
 
 

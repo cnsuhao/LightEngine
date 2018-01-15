@@ -1,2 +1,4 @@
 TODO:
 
+Math:
+- Optimize operator overloads (use copy initialization)

@@ -2,11 +2,6 @@
 
 namespace Light
 {
-	Vector4::Vector4()
-	{
-
-	}
-
 	Vector4::Vector4(const float& a_x, const float& a_y, const float& a_z, const float& a_w)
 	{
 		x = a_x;
@@ -18,101 +13,101 @@ namespace Light
 	
 	// Operate on two Vector4 objects and return a new Vector4 object
 
-	Vector4 operator+(const Vector4& Vector4_1, const Vector4& Vector4_2)
+	Vector4 operator+(const Vector4& a_Vector4_1, const Vector4& a_Vector4_2)
 	{
-		return Vector4(Vector4_1.x + Vector4_2.x, Vector4_1.y + Vector4_2.y, Vector4_1.z + Vector4_2.z, Vector4_1.w + Vector4_2.w);
+		return Vector4(a_Vector4_1.x + a_Vector4_2.x, a_Vector4_1.y + a_Vector4_2.y, a_Vector4_1.z + a_Vector4_2.z, a_Vector4_1.w + a_Vector4_2.w);
 	}
 
-	Vector4 operator-(const Vector4& Vector4_1, const Vector4& Vector4_2)
+	Vector4 operator-(const Vector4& a_Vector4_1, const Vector4& a_Vector4_2)
 	{
-		return Vector4(Vector4_1.x - Vector4_2.x, Vector4_1.y - Vector4_2.y, Vector4_1.z - Vector4_2.z, Vector4_1.w - Vector4_2.w);
+		return Vector4(a_Vector4_1.x - a_Vector4_2.x, a_Vector4_1.y - a_Vector4_2.y, a_Vector4_1.z - a_Vector4_2.z, a_Vector4_1.w - a_Vector4_2.w);
 	}
 
-	Vector4 operator*(const Vector4& Vector4_1, const Vector4& Vector4_2)
+	Vector4 operator*(const Vector4& a_Vector4_1, const Vector4& a_Vector4_2)
 	{
-		return Vector4(Vector4_1.x * Vector4_2.x, Vector4_1.y * Vector4_2.y, Vector4_1.z * Vector4_2.z, Vector4_1.w * Vector4_2.w);
+		return Vector4(a_Vector4_1.x * a_Vector4_2.x, a_Vector4_1.y * a_Vector4_2.y, a_Vector4_1.z * a_Vector4_2.z, a_Vector4_1.w * a_Vector4_2.w);
 	}
 
-	Vector4 operator/(const Vector4& Vector4_1, const Vector4& Vector4_2)
+	Vector4 operator/(const Vector4& a_Vector4_1, const Vector4& a_Vector4_2)
 	{
-		return Vector4(Vector4_1.x / Vector4_2.x, Vector4_1.y / Vector4_2.y, Vector4_1.z / Vector4_2.z, Vector4_1.w / Vector4_2.w);
+		return Vector4(a_Vector4_1.x / a_Vector4_2.x, a_Vector4_1.y / a_Vector4_2.y, a_Vector4_1.z / a_Vector4_2.z, a_Vector4_1.w / a_Vector4_2.w);
 	}
 
 
 	// Operate on the current Vector4 object in-place and return its reference
 
-	Vector4& Vector4::add(const Vector4& other)
+	Vector4& Vector4::add(const Vector4& a_other)
 	{
-		x += other.x;
-		y += other.y;
-		z += other.z;
-		w += other.w;
+		x += a_other.x;
+		y += a_other.y;
+		z += a_other.z;
+		w += a_other.w;
 		return *this;
 	}
 
-	Vector4& Vector4::subtract(const Vector4& other)
+	Vector4& Vector4::subtract(const Vector4& a_other)
 	{
-		x -= other.x;
-		y -= other.y;
-		z -= other.z;
-		w -= other.w;
+		x -= a_other.x;
+		y -= a_other.y;
+		z -= a_other.z;
+		w -= a_other.w;
 		return *this;
 	}
 
-	Vector4& Vector4::multiply(const Vector4& other)
+	Vector4& Vector4::multiply(const Vector4& a_other)
 	{
-		x *= other.x;
-		y *= other.y;
-		z *= other.z;
-		w *= other.w;
+		x *= a_other.x;
+		y *= a_other.y;
+		z *= a_other.z;
+		w *= a_other.w;
 		return *this;
 	}
 
-	Vector4& Vector4::divide(const Vector4& other)
+	Vector4& Vector4::divide(const Vector4& a_other)
 	{
-		x /= other.x;
-		y /= other.y;
-		z /= other.z;
-		w /= other.w;
+		x /= a_other.x;
+		y /= a_other.y;
+		z /= a_other.z;
+		w /= a_other.w;
 		return *this;
 	}
 
-	Vector4& Vector4::operator+=(const Vector4& other)
+	Vector4& Vector4::operator+=(const Vector4& a_other)
 	{
-		return add(other);
+		return add(a_other);
 	}
 
-	Vector4& Vector4::operator-=(const Vector4& other)
+	Vector4& Vector4::operator-=(const Vector4& a_other)
 	{
-		return subtract(other);
+		return subtract(a_other);
 	}
 
-	Vector4& Vector4::operator*=(const Vector4& other)
+	Vector4& Vector4::operator*=(const Vector4& a_other)
 	{
-		return multiply(other);
+		return multiply(a_other);
 	}
 
-	Vector4& Vector4::operator/=(const Vector4& other)
+	Vector4& Vector4::operator/=(const Vector4& a_other)
 	{
-		return divide(other);
+		return divide(a_other);
 	}
 
-	bool Vector4::operator==(const Vector4& other)
+	bool Vector4::operator==(const Vector4& a_other)
 	{
-		return (x == other.x && y == other.y && z == other.z && w == other.w);
+		return (x == a_other.x && y == a_other.y && z == a_other.z && w == a_other.w);
 	}
 
-	bool Vector4::operator!=(const Vector4& other)
+	bool Vector4::operator!=(const Vector4& a_other)
 	{
-		return (!(*this == other));
+		return (!(*this == a_other));
 	}
 
 
-	// Other operator overloads
+	// a_other operator overloads
 
-	std::ostream& operator<<(std::ostream& stream, const Vector4& vector)
+	std::ostream& operator<<(std::ostream& a_stream, const Vector4& a_vector)
 	{
-		stream << "Vector4: (" << vector.x << ", " << vector.y << ", " << vector.z << ", " << vector.w << ")";
-		return stream;
+		a_stream << "Vector4: (" << a_vector.x << ", " << a_vector.y << ", " << a_vector.z << ", " << a_vector.w << ")";
+		return a_stream;
 	}
 }

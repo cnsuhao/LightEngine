@@ -39,7 +39,7 @@ namespace Light
 		if (!gladLoadGL())
 			std::cout << "Failed to load OpenGL with glad" << std::endl;
 		else
-			printf("OpenGL Version %d.%d loaded", GLVersion.major, GLVersion.minor);
+			std::cout << glGetString(GL_VERSION) << std::endl;
 	}
 
 	void Window::clear() const

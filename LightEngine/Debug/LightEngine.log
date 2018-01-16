@@ -1,7 +1,2 @@
-﻿  matrix4.cpp
-c:\users\patrick\desktop\lightengine project\lightengine\lightengine\src\math\math.h(12): warning C4244: 'return': conversion from 'double' to 'float', possible loss of data
-  Generating Code...
-  Skipping... (no relevant changes detected)
-  main.cpp
-  LightEngine.cpp
+﻿  window.cpp
   LightEngine.vcxproj -> C:\Users\Patrick\Desktop\LightEngine Project\LightEngine\Debug\LightEngine.exe

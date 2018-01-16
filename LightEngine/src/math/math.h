@@ -7,8 +7,12 @@
 
 namespace Light
 {
-	float toRadians(float degrees)
+	class MathUtilities
 	{
-		return degrees * (M_PI / 180.0f);
-	}
+	public:
+		static float toRadians(float degrees)
+		{
+			return degrees * (M_PI / 180.0f);
+		}
+	};
 }

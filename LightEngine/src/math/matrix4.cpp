@@ -8,15 +8,15 @@ namespace Light
 			underlyingArray[i] = 0.0f;
 	}
 
-	Matrix4::Matrix4(float diagonal)
+	Matrix4::Matrix4(float a_diagonal)
 	{
 		for (int i = 0; i < 4 * 4; i++)
 			underlyingArray[i] = 0.0f;
 
-		underlyingArray[0 + (0 * 4)] = diagonal;
-		underlyingArray[1 + (1 * 4)] = diagonal;
-		underlyingArray[2 + (2 * 4)] = diagonal;
-		underlyingArray[3 + (3 * 4)] = diagonal;
+		underlyingArray[0 + (0 * 4)] = a_diagonal;
+		underlyingArray[1 + (1 * 4)] = a_diagonal;
+		underlyingArray[2 + (2 * 4)] = a_diagonal;
+		underlyingArray[3 + (3 * 4)] = a_diagonal;
 	}
 
 	Matrix4 Matrix4::identity()
@@ -24,7 +24,7 @@ namespace Light
 		return Matrix4(1.0f);
 	}
 
-	Matrix4& Matrix4::multiply(const Matrix4& other)
+	Matrix4& Matrix4::multiply(const Matrix4& a_other)
 	{
 		for (int column = 0; column < 4; column++)
 		{
@@ -33,7 +33,7 @@ namespace Light
 				float sum = 0;
 				for (int element = 0; element < 4; element++)
 				{		
-					sum += underlyingArray[row + (element * 4)] * other.underlyingArray[element + (column * 4)];
+					sum += underlyingArray[row + (element * 4)] * a_other.underlyingArray[element + (column * 4)];
 				}
 				// this will probably not work
 				underlyingArray[row + (column * 4)] = sum;
@@ -42,14 +42,14 @@ namespace Light
 		return *this;
 	}
 
-	Matrix4 operator*(Matrix4 matrix4_1, const Matrix4& matrix4_2)
+	Matrix4 operator*(Matrix4 a_matrix4_1, const Matrix4& a_matrix4_2)
 	{
-		return matrix4_1.multiply(matrix4_2);
+		return a_matrix4_1.multiply(a_matrix4_2);
 	}
 
-	Matrix4& Matrix4::operator*=(const Matrix4& other)
+	Matrix4& Matrix4::operator*=(const Matrix4& a_other)
 	{
-		return multiply(other);
+		return multiply(a_other);
 	}
 
 	Matrix4 Matrix4::orthographic(float a_clip_left, float a_clip_right, float a_clip_top, float a_clip_bottom, float a_clip_near, float a_clip_far)
@@ -82,7 +82,7 @@ namespace Light
 	{
 		Matrix4 output(1.0f);
 
-		float radians = toRadians(a_angle);
+		float radians = MathUtilities::toRadians(a_angle);
 		float cosRadians = cos(radians);
 		float sinRadians = sin(radians);
 		float omc = 1.0f - cos(radians);

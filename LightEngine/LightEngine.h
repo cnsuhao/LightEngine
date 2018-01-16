@@ -1,20 +1,16 @@
 #pragma once
-
 #include "src/graphics/window.h"
+#include "src/graphics/shader.h"
 #include "src/input/input.h"
+#include "src/math/math.h"
 
 namespace Light
 {
 	class LightEngine
 	{
-
-	private:
-
 	public:
 		Window* window;
 		Input* input;
-
-	private:
 
 	public:
 		LightEngine(const char* window_title, int window_width, int window_height);

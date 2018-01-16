@@ -17,7 +17,7 @@ namespace Light
 		GLFWwindow* window;
 
 	public:
-		Window(const char* a_title, int a_width, int a_height);
+		Window(const char* title, int width, int height);
 		~Window();
 		void clear() const;
 		void update();

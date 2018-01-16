@@ -17,97 +17,97 @@ namespace Light
 	
 	// Operate on two Vector3 objects and return a new Vector3 object
 
-	Vector3 operator+(const Vector3& Vector3_1, const Vector3& Vector3_2)
+	Vector3 operator+(const Vector3& a_Vector3_1, const Vector3& a_Vector3_2)
 	{
-		return Vector3(Vector3_1.x + Vector3_2.x, Vector3_1.y + Vector3_2.y, Vector3_1.z + Vector3_2.z);
+		return Vector3(a_Vector3_1.x + a_Vector3_2.x, a_Vector3_1.y + a_Vector3_2.y, a_Vector3_1.z + a_Vector3_2.z);
 	}
 
-	Vector3 operator-(const Vector3& Vector3_1, const Vector3& Vector3_2)
+	Vector3 operator-(const Vector3& a_Vector3_1, const Vector3& a_Vector3_2)
 	{
-		return Vector3(Vector3_1.x - Vector3_2.x, Vector3_1.y - Vector3_2.y, Vector3_1.z - Vector3_2.z);
+		return Vector3(a_Vector3_1.x - a_Vector3_2.x, a_Vector3_1.y - a_Vector3_2.y, a_Vector3_1.z - a_Vector3_2.z);
 	}
 
-	Vector3 operator*(const Vector3& Vector3_1, const Vector3& Vector3_2)
+	Vector3 operator*(const Vector3& a_Vector3_1, const Vector3& a_Vector3_2)
 	{
-		return Vector3(Vector3_1.x * Vector3_2.x, Vector3_1.y * Vector3_2.y, Vector3_1.z * Vector3_2.z);
+		return Vector3(a_Vector3_1.x * a_Vector3_2.x, a_Vector3_1.y * a_Vector3_2.y, a_Vector3_1.z * a_Vector3_2.z);
 	}
 
-	Vector3 operator/(const Vector3& Vector3_1, const Vector3& Vector3_2)
+	Vector3 operator/(const Vector3& a_Vector3_1, const Vector3& a_Vector3_2)
 	{
-		return Vector3(Vector3_1.x / Vector3_2.x, Vector3_1.y / Vector3_2.y, Vector3_1.z / Vector3_2.z);
+		return Vector3(a_Vector3_1.x / a_Vector3_2.x, a_Vector3_1.y / a_Vector3_2.y, a_Vector3_1.z / a_Vector3_2.z);
 	}
 
 
 	// Operate on the current Vector3 object in-place and return its reference
 
-	Vector3& Vector3::add(const Vector3& other)
+	Vector3& Vector3::add(const Vector3& a_other)
 	{
-		x += other.x;
-		y += other.y;
-		z += other.z;
+		x += a_other.x;
+		y += a_other.y;
+		z += a_other.z;
 		return *this;
 	}
 
-	Vector3& Vector3::subtract(const Vector3& other)
+	Vector3& Vector3::subtract(const Vector3& a_other)
 	{
-		x -= other.x;
-		y -= other.y;
-		z -= other.z;
+		x -= a_other.x;
+		y -= a_other.y;
+		z -= a_other.z;
 		return *this;
 	}
 
-	Vector3& Vector3::multiply(const Vector3& other)
+	Vector3& Vector3::multiply(const Vector3& a_other)
 	{
-		x *= other.x;
-		y *= other.y;
-		z *= other.z;
+		x *= a_other.x;
+		y *= a_other.y;
+		z *= a_other.z;
 		return *this;
 	}
 
-	Vector3& Vector3::divide(const Vector3& other)
+	Vector3& Vector3::divide(const Vector3& a_other)
 	{
-		x /= other.x;
-		y /= other.y;
-		z /= other.z;
+		x /= a_other.x;
+		y /= a_other.y;
+		z /= a_other.z;
 		return *this;
 	}
 
-	Vector3& Vector3::operator+=(const Vector3& other)
+	Vector3& Vector3::operator+=(const Vector3& a_other)
 	{
-		return add(other);
+		return add(a_other);
 	}
 
-	Vector3& Vector3::operator-=(const Vector3& other)
+	Vector3& Vector3::operator-=(const Vector3& a_other)
 	{
-		return subtract(other);
+		return subtract(a_other);
 	}
 
-	Vector3& Vector3::operator*=(const Vector3& other)
+	Vector3& Vector3::operator*=(const Vector3& a_other)
 	{
-		return multiply(other);
+		return multiply(a_other);
 	}
 
-	Vector3& Vector3::operator/=(const Vector3& other)
+	Vector3& Vector3::operator/=(const Vector3& a_other)
 	{
-		return divide(other);
+		return divide(a_other);
 	}
 
-	bool Vector3::operator==(const Vector3& other)
+	bool Vector3::operator==(const Vector3& a_other)
 	{
-		return (x == other.x && y == other.y && z == other.z);
+		return (x == a_other.x && y == a_other.y && z == a_other.z);
 	}
 
-	bool Vector3::operator!=(const Vector3& other)
+	bool Vector3::operator!=(const Vector3& a_other)
 	{
-		return (!(*this == other));
+		return (!(*this == a_other));
 	}
 
 
-	// Other operator overloads
+	// a_other operator overloads
 
-	std::ostream& operator<<(std::ostream& stream, const Vector3& vector)
+	std::ostream& operator<<(std::ostream& a_stream, const Vector3& a_vector)
 	{
-		stream << "Vector3: (" << vector.x << ", " << vector.y << ", " << vector.z << ")";
-		return stream;
+		a_stream << "Vector3: (" << a_vector.x << ", " << a_vector.y << ", " << a_vector.z << ")";
+		return a_stream;
 	}
 }

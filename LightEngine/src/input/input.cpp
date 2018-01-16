@@ -34,38 +34,38 @@ namespace Light
 
 	}
 
-	bool Input::getKeyState(unsigned int keycode)
+	bool Input::getKeyState(unsigned int a_keycode)
 	{
-		if (keycode >= MAX_KEYS)
+		if (a_keycode >= MAX_KEYS)
 		{
 			return false;
 			// log something here...
 		}
 
-		return Input::kInputs[keycode];
+		return Input::kInputs[a_keycode];
 	}
 
-	bool Input::getMouseButtonState(unsigned int button)
+	bool Input::getMouseButtonState(unsigned int a_button)
 	{
-		if (button >= MAX_BUTTONS)
+		if (a_button >= MAX_BUTTONS)
 		{
 			return false;
 			// log something here...
 		}
 
-		return mInputs[button];
+		return mInputs[a_button];
 	}
 
-	void Input::getMousePosition(double& x_pos, double& y_pos)
+	void Input::getMousePosition(double& a_x_pos, double& a_y_pos)
 	{
-		x_pos = mouseX;
-		y_pos = mouseY;
+		a_x_pos = mouseX;
+		a_y_pos = mouseY;
 	}
 
-	void Input::getMouseScrollOffset(double& x_offset, double& y_offset)
+	void Input::getMouseScrollOffset(double& a_x_offset, double& a_y_offset)
 	{
-		x_offset = mouseScrollOffsetX;
-		y_offset = mouseScrollOffsetY;
+		a_x_offset = mouseScrollOffsetX;
+		a_y_offset = mouseScrollOffsetY;
 	}
 
 	void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods)

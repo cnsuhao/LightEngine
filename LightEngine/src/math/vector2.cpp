@@ -16,93 +16,93 @@ namespace Light
 	
 	// Operate on two Vector2 objects and return a new Vector2 object
 
-	Vector2 operator+(const Vector2& Vector2_1, const Vector2& Vector2_2)
+	Vector2 operator+(const Vector2& a_Vector2_1, const Vector2& a_Vector2_2)
 	{
-		return Vector2(Vector2_1.x + Vector2_2.x, Vector2_1.y + Vector2_2.y);
+		return Vector2(a_Vector2_1.x + a_Vector2_2.x, a_Vector2_1.y + a_Vector2_2.y);
 	}
 
-	Vector2 operator-(const Vector2& Vector2_1, const Vector2& Vector2_2)
+	Vector2 operator-(const Vector2& a_Vector2_1, const Vector2& a_Vector2_2)
 	{
-		return Vector2(Vector2_1.x - Vector2_2.x, Vector2_1.y - Vector2_2.y);
+		return Vector2(a_Vector2_1.x - a_Vector2_2.x, a_Vector2_1.y - a_Vector2_2.y);
 	}
 
-	Vector2 operator*(const Vector2& Vector2_1, const Vector2& Vector2_2)
+	Vector2 operator*(const Vector2& a_Vector2_1, const Vector2& a_Vector2_2)
 	{
-		return Vector2(Vector2_1.x * Vector2_2.x, Vector2_1.y * Vector2_2.y);
+		return Vector2(a_Vector2_1.x * a_Vector2_2.x, a_Vector2_1.y * a_Vector2_2.y);
 	}
 
-	Vector2 operator/(const Vector2& Vector2_1, const Vector2& Vector2_2)
+	Vector2 operator/(const Vector2& a_Vector2_1, const Vector2& a_Vector2_2)
 	{
-		return Vector2(Vector2_1.x / Vector2_2.x, Vector2_1.y / Vector2_2.y);
+		return Vector2(a_Vector2_1.x / a_Vector2_2.x, a_Vector2_1.y / a_Vector2_2.y);
 	}
 
 
 	// Operate on the current Vector2 object in-place and return its reference
 
-	Vector2& Vector2::add(const Vector2& other)
+	Vector2& Vector2::add(const Vector2& a_other)
 	{
-		x += other.x;
-		y += other.y;
+		x += a_other.x;
+		y += a_other.y;
 		return *this;
 	}
 
-	Vector2& Vector2::subtract(const Vector2& other)
+	Vector2& Vector2::subtract(const Vector2& a_other)
 	{
-		x -= other.x;
-		y -= other.y;
+		x -= a_other.x;
+		y -= a_other.y;
 		return *this;
 	}
 
-	Vector2& Vector2::multiply(const Vector2& other)
+	Vector2& Vector2::multiply(const Vector2& a_other)
 	{
-		x *= other.x;
-		y *= other.y;
+		x *= a_other.x;
+		y *= a_other.y;
 		return *this;
 	}
 
-	Vector2& Vector2::divide(const Vector2& other)
+	Vector2& Vector2::divide(const Vector2& a_other)
 	{
-		x /= other.x;
-		y /= other.y;
+		x /= a_other.x;
+		y /= a_other.y;
 		return *this;
 	}
 
-	Vector2& Vector2::operator+=(const Vector2& other)
+	Vector2& Vector2::operator+=(const Vector2& a_other)
 	{
-		return add(other);
+		return add(a_other);
 	}
 
-	Vector2& Vector2::operator-=(const Vector2& other)
+	Vector2& Vector2::operator-=(const Vector2& a_other)
 	{
-		return subtract(other);
+		return subtract(a_other);
 	}
 
-	Vector2& Vector2::operator*=(const Vector2& other)
+	Vector2& Vector2::operator*=(const Vector2& a_other)
 	{
-		return multiply(other);
+		return multiply(a_other);
 	}
 
-	Vector2& Vector2::operator/=(const Vector2& other)
+	Vector2& Vector2::operator/=(const Vector2& a_other)
 	{
-		return divide(other);
+		return divide(a_other);
 	}
 
-	bool Vector2::operator==(const Vector2& other)
+	bool Vector2::operator==(const Vector2& a_other)
 	{
-		return (x == other.x && y == other.y);
+		return (x == a_other.x && y == a_other.y);
 	}
 
-	bool Vector2::operator!=(const Vector2& other)
+	bool Vector2::operator!=(const Vector2& a_other)
 	{
-		return (!(*this == other));
+		return (!(*this == a_other));
 	}
 
 
-	// Other operator overloads
+	// a_other operator overloads
 
-	std::ostream& operator<<(std::ostream& stream, const Vector2& vector)
+	std::ostream& operator<<(std::ostream& a_stream, const Vector2& a_vector)
 	{
-		stream << "Vector2: (" << vector.x << ", " << vector.y << ")";
-		return stream;
+		a_stream << "Vector2: (" << a_vector.x << ", " << a_vector.y << ")";
+		return a_stream;
 	}
 }

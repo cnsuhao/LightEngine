@@ -125,7 +125,11 @@
   <ItemGroup>
     <ClCompile Include="main.cpp" />
     <ClCompile Include="src\glad.c" />
+    <ClCompile Include="src\graphics\index_buffer.cpp" />
+    <ClCompile Include="src\graphics\renderer.cpp" />
     <ClCompile Include="src\graphics\shader.cpp" />
+    <ClCompile Include="src\graphics\vertex_array.cpp" />
+    <ClCompile Include="src\graphics\vertex_buffer.cpp" />
     <ClCompile Include="src\graphics\window.cpp" />
     <ClCompile Include="LightEngine.cpp" />
     <ClCompile Include="src\input\input.cpp" />
@@ -135,7 +139,12 @@
     <ClCompile Include="src\math\vector4.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\graphics\index_buffer.h" />
+    <ClInclude Include="src\graphics\renderer.h" />
     <ClInclude Include="src\graphics\shader.h" />
+    <ClInclude Include="src\graphics\vertex_array.h" />
+    <ClInclude Include="src\graphics\vertex_buffer.h" />
+    <ClInclude Include="src\graphics\vertex_buffer_layout.h" />
     <ClInclude Include="src\graphics\window.h" />
     <ClInclude Include="LightEngine.h" />
     <ClInclude Include="src\input\input.h" />

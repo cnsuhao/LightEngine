@@ -17,18 +17,9 @@ namespace Light
 			12, 3, 0
 		};
 
-		GLuint vbo;
-		glGenBuffers(1, &vbo);
-		glBindBuffer(GL_ARRAY_BUFFER, vbo);
-		glBufferData(GL_ARRAY_BUFFER, sizeof(vertices), vertices, GL_STATIC_DRAW);
-		glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 0, 0);
-		glEnableVertexAttribArray(0);
-
-		Matrix4 ortho = Matrix4::orthographic(0, 16, 0, 9, -1, 1);
 
 		Shader shader("src/graphics/shaders/basic.vert", "src/graphics/shaders/basic.frag");
 		shader.enable();
-		glUniformMatrix4fv(glGetUniformLocation(shader.shaderID, "pr_matrix"), 1, GL_FALSE, ortho.underlyingArray);
 
 
 		input = new Input(window);

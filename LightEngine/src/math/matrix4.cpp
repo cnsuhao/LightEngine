@@ -35,7 +35,7 @@ namespace Light
 				{		
 					sum += underlyingArray[row + (element * 4)] * a_other.underlyingArray[element + (column * 4)];
 				}
-				// this will probably not work
+				// this will probably not work...
 				underlyingArray[row + (column * 4)] = sum;
 			}
 		}

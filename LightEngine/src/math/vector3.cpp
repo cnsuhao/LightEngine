@@ -103,7 +103,7 @@ namespace Light
 	}
 
 
-	// a_other operator overloads
+	// other operator overloads
 
 	std::ostream& operator<<(std::ostream& a_stream, const Vector3& a_vector)
 	{

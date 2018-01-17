@@ -25,6 +25,8 @@ namespace Light
 		input = new Input(window);
 	}
 
+	// NOTE: LightEngine handles the deletion of all major components. Thus, while input is tied to a
+	// Window object, this pointer should NOT be deleted from within Input. LightEngine is responsible for this
 	LightEngine::~LightEngine()
 	{
 		delete window;

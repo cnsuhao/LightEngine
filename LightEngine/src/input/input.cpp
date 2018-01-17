@@ -2,6 +2,7 @@
 
 namespace Light
 {
+	// statics
 	bool Input::kInputs[MAX_KEYS];
 	bool Input::mInputs[MAX_BUTTONS];
 	double Input::mouseX;
@@ -9,11 +10,21 @@ namespace Light
 	double Input::mouseScrollOffsetX;
 	double Input::mouseScrollOffsetY;
 
+	// callbacks
 	void key_callback(GLFWwindow* window, int key, int scancode, int action, int mods);
 	void mouse_button_callback(GLFWwindow* window, int button, int action, int mods);
 	void mouse_pos_callback(GLFWwindow* window, double xpos, double ypos);
 	void mouse_scroll_callback(GLFWwindow* window, double xoffset, double yoffset);
 
+	/*
+	INPUT: responsible for obtaining input information from its associated Window object.
+
+	On initialization input state arrays are initialized. Note that the current implementation makes
+	these STATIC (under the assumption that in the event of multiple windows, we would want to use the
+	same input devices). Also note that multi-window applications have not been tested, however they
+	should be supported as long as the current window "focus" is tracked and the inputs are interpreted
+	accordingly from external classes.
+	*/
 	Input::Input(Window* a_window)
 	{
 		window = a_window;

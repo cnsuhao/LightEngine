@@ -2,6 +2,12 @@
 
 namespace Light
 {
+	/*
+	WINDOW: a wrapper for our GLFWwindow object.
+	
+	Window is responsible for providing buffer clear/swap functionality, polling for events (tied to
+	the window object), and checking if the user has closed the window.
+	*/
 	Window::Window(const char* a_title, int a_width, int a_height)
 	{
 		title = a_title;
@@ -18,6 +24,7 @@ namespace Light
 	// Creates a window with OpenGL
 	void Window::init()
 	{
+		// Initialize GLFW
 		if (!glfwInit())
 		{
 			glfwTerminate();
@@ -25,8 +32,10 @@ namespace Light
 			return;
 		}
 
+		// Create the window
 		window = glfwCreateWindow(width, height, title, NULL, NULL);
 
+		// Check the window was created
 		if (!window)
 		{
 			glfwTerminate();
@@ -34,8 +43,10 @@ namespace Light
 			return;
 		}
 
+		// Make this window the current context
 		glfwMakeContextCurrent(window);
 
+		// Initialize GLAD
 		if (!gladLoadGL())
 			std::cout << "Failed to load OpenGL with glad" << std::endl;
 		else
@@ -55,7 +66,6 @@ namespace Light
 	}
 
 
-	// Check if the user close the window
 	bool Window::closed() const
 	{
 		return glfwWindowShouldClose(window);

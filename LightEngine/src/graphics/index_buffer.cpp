@@ -3,6 +3,9 @@
 
 namespace Light
 {
+	/*
+	INDEX BUFFER: allows reuse of vertices by storing vertice attribs in a GL_ELEMENT_ARRAY_BUFFER
+	*/
 	IndexBuffer::IndexBuffer(const unsigned int* a_data, unsigned int a_count)
 		: count(a_count)
 	{

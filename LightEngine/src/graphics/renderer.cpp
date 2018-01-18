@@ -2,6 +2,9 @@
 
 namespace Light
 {
+
+	// OPENGL DEBUG TOOLS
+
 	void GLClearError()
 	{
 		while (glGetError() != GL_NO_ERROR);

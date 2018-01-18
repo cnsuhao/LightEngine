@@ -3,6 +3,12 @@
 
 namespace Light
 {
+	/*
+	VERTEX BUFFER: a wrapper for vertex buffer
+
+	VertexBuffer provides binding/unbinding functionality for vertex buffers
+	as well as stores unique rendererID's tied to each buffer instance.
+	*/
 	VertexBuffer::VertexBuffer(const void* a_data, unsigned int a_size)
 	{
 		GlCall(glGenBuffers(1, &rendererID));

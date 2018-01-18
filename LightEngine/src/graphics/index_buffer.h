@@ -12,7 +12,10 @@ namespace Light
 		IndexBuffer(const unsigned int* data, unsigned int count);
 		~IndexBuffer();
 
+		// bind this index buffer
 		void bind() const;
+
+		// unbind this index buffer
 		void unbind() const;
 
 		inline unsigned int getCount() const { return count; }

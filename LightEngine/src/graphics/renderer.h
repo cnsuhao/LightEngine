@@ -1,11 +1,13 @@
 #pragma once
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
-
 #include <iostream>
 
 namespace Light
 {
+
+	// OPENGL DEBUG TOOLS
+
 	void GLClearError();
 	bool GLLogCall(const char* function, const char* file, int line);
 

@@ -12,9 +12,13 @@ namespace Light
 		VertexArray();
 		~VertexArray();
 
+		// given a VertexBuffer & VertexBufferLayout, bind the buffer and assign attributes
 		void LoadBuffer(const VertexBuffer& vb, const VertexBufferLayout& layout);
 
+		// bind this vertex array
 		void bind() const;
+
+		// unbind vertex array
 		void unbind() const;
 	};
 }
